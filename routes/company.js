@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 
-const companyController = require('../controllers/company')
+const logController = require('../controllers/logs')
 
-router.post('/name', companyController.logCompanyName)
-router.post('/stocks', companyController.logCompanyStocksData)
+router.post('/name', logController.logCompanyName)
+router.post('/stocks', logController.logCompanyStocksData)
 
 module.exports = router
