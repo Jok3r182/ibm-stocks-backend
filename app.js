@@ -20,9 +20,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/', (req, res, next) => res.json({message: 'Hi'}))
+
 app.use("/company", companyRoutes);
 mongoConnect(() => {
-  app.listen(8080);
+  app.listen(80);
 });
 
 module.exports = app
