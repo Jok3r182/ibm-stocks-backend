@@ -5,6 +5,7 @@ const companyRoutes = require("./routes/company");
 const mongoConnect = require("./util/database").mongoConnect;
 
 const app = express();
+const port = process.env.PORT || 80
 
 app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,11 +21,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', (req, res, next) => res.json({message: 'Hi'}))
-
 app.use("/company", companyRoutes);
 mongoConnect(() => {
-  app.listen(80);
+  app.listen(port);
 });
 
 module.exports = app
