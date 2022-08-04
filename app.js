@@ -4,8 +4,13 @@ const helmet = require('helmet')
 const companyRoutes = require("./routes/company");
 const mongoConnect = require("./util/database").mongoConnect;
 
+const port = process.env.PORT || 8080
 const app = express();
-const port = process.env.PORT || 80
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }));
