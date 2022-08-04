@@ -23,3 +23,5 @@ app.use("/company", companyRoutes);
 mongoConnect(() => {
   app.listen(8080);
 });
+
+module.exports = app

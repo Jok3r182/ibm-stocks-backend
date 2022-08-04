@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-const nameConstraint = Joi.string().alphanum().max(35).required()
+const nameConstraint = Joi.string().max(35).required()
 
 exports.companyNameSchema = Joi.object().keys({
   name: nameConstraint,
@@ -14,6 +14,6 @@ exports.companyStocksSchema = Joi.object().keys({
     Joi.object({
       x: Joi.string().required(),
       y: Joi.array().required(),
-    })
-  ),
+    }).required()
+  ).required(),
 });

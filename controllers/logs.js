@@ -24,7 +24,7 @@ exports.logCompanyName = (req, res, next) => {
     console.log(body.date + " Searched Company: " + body.name);
     const companyNameLog = new CompanyNameLog(body.name, body.date);
     companyNameLog.save();
-    res.json({ message: `Company: ${body.name}` });
+    res.status(200).json({ message: `Company: ${body.name}` });
   }
 };
 
@@ -53,6 +53,6 @@ exports.logCompanyStocksData = (req, res, next) => {
       body.stocks
     );
     companyStocksLog.save();
-    res.json({ message: `Company stocks: ${body}` });
+    res.status(200).json({ message: `Company stocks: ${body}` });
   }
 };
