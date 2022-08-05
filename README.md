@@ -12,6 +12,9 @@ It's purpose is to log user actions - Company Name and Company Stocks.
 
 ## API Reference
 
+You can access backend from this link:
+https://ibmappbackend.azurewebsites.net
+
 #### Create company name log
 
 ```http
@@ -36,7 +39,7 @@ POST /company/stocks
 | `stocks` | `array` | **Required**. Contains stocks data - time and open, high, low, close|
 
 
-#### For more API reference check Swagger - /api-docs
+#### For more API reference check Swagger - /api-docs or https://ibmappbackend.azurewebsites.net/api-docs/
 
 
 ## Authors
