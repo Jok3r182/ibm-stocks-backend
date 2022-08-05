@@ -8,8 +8,8 @@ const CompanyStocksLog = require("../models/logs").CompanyStocksLog;
 exports.logCompanyName = (req, res, next) => {
   const { body } = req;
   if (Object.keys(body).length === 0) {
-    res.status(422).json({
-      message: "Invalid request",
+    res.status(400).json({
+      message: "Body is empty!",
     });
   }
 
