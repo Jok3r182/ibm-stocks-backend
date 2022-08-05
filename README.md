@@ -6,7 +6,7 @@ It's purpose is to log user actions - Company Name and Company Stocks.
 ## Running an app
 
 1. install nodejs
-2. Delete node modules if exists
+2. delete node modules if exists
 3. npm install
 4. npm start
 
