@@ -4,7 +4,7 @@ const helmet = require('helmet')
 const companyRoutes = require("./routes/company");
 const mongoConnect = require("./util/database").mongoConnect;
 
-const port = process.env.PORT || 8080
+const port = 80
 const app = express();
 
 const swaggerUi = require('swagger-ui-express');
