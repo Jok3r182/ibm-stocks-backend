@@ -12,7 +12,7 @@ describe('/POST CompanyNameLog', () => {
           .post('/company/name')
           .send(data)
           .end((err, res) => {
-                res.should.have.status(422);
+                res.should.have.status(400);
             done();
           });
     });
