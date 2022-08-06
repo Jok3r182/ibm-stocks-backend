@@ -1,6 +1,6 @@
 # IBM technical assignment backend
 
-This project is a one part of IBM technical assignment. 
+This project is a back-end part of IBM technical assignment. 
 It's purpose is to log user actions - Company Name and Company Stocks.
 
 ## Running an app
