@@ -11,10 +11,6 @@ It's purpose is to log user actions - Company Name and Company Stocks.
 4. npm start
 
 ## API Reference
-
-You can access backend from this link:
-https://ibmappbackend.azurewebsites.net
-
 #### Create company name log
 
 ```http
